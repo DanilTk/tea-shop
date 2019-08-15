@@ -1,3 +1,5 @@
+package model;
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,6 +16,14 @@ public class Client {
     private String surname;
     private LocalDateTime creationTimestamp;
     private LocalDateTime deletionTimestamp;
+
+    public Client(Long id,
+                  String name,
+                  String surname) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+    }
 
     public Client(String name,
                   String surname) {
