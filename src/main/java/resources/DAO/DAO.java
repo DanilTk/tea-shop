@@ -8,7 +8,6 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public abstract class DAO {
-
     private Connection connection;
 
     public DAO() {
@@ -25,7 +24,7 @@ public abstract class DAO {
         }
     }
 
-    public Connection getConnection() {
+    protected Connection getConnection() {
         return connection;
     }
 }

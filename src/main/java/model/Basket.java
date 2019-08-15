@@ -7,7 +7,6 @@ import java.util.List;
 
 @Getter
 public class Basket {
-
     private Long id;
     private Client client;
     private List<Product> products;

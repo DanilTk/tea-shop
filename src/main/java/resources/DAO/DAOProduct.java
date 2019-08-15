@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DAOProduct extends DAO implements DAOFunctionality<Product> {
-    private ProductQueryBuilder productQueryBuilder = new ProductQueryBuilder(super.getConnection());
+    private ProductQueryBuilder productQueryBuilder = new ProductQueryBuilder(super.getConnection()); //TODO: Robert to advise if this piece is needed or can workaround?
 
     @Override
     public Product add(Product product) {
@@ -29,7 +29,7 @@ public class DAOProduct extends DAO implements DAOFunctionality<Product> {
     }
 
     @Override
-    public List<Product> loadAll() {
+    public List<Product> getAll() {
 
         List<Product> products = new ArrayList<>();
         try {

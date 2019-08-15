@@ -6,7 +6,7 @@ public interface DAOFunctionality<T> {
 
     T add(T domain);
 
-    List<T> loadAll();
+    List<T> getAll();
 
     T update(Long id, T domain);
 
