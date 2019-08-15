@@ -19,11 +19,11 @@ public class ClientValidator {
 
     private static boolean validateClientNameIsNotNull(Client client) {
 
-        return client.getName() != null;
+        return client.getFirstName() != null;
     }
 
     private static boolean validateClientSurnameIsNotNull(Client client) {
 
-        return client.getSurname() != null;
+        return client.getLastName() != null;
     }
 }

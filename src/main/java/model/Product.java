@@ -12,13 +12,13 @@ import java.math.BigDecimal;
 @Setter
 @EqualsAndHashCode
 public class Product {
-    private Long id;
+    private Integer id;
     private String name;
     private BigDecimal price;
     private MeasureName measureName;
     private ProductCategory productCategory;
 
-    public Product(Long id,
+    public Product(Integer id,
                    String name,
                    BigDecimal price,
                    MeasureName measureName,

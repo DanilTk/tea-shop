@@ -8,8 +8,8 @@ public interface DAOFunctionality<T> {
 
     List<T> getAll();
 
-    T update(Long id, T domain);
+    T update(Integer id, T domain);
 
-    Long delete(Long id);
+    Integer delete(Integer id);
 
 }

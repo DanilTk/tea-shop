@@ -10,25 +10,25 @@ import java.time.LocalDateTime;
 @Setter
 @EqualsAndHashCode
 public class Client {
-    private Long id;
-    private String name;
-    private String surname;
+    private Integer id;
+    private String firstName;
+    private String lastName;
     private LocalDateTime creationTimestamp;
     private LocalDateTime deletionTimestamp;
 
-    public Client(Long id,
-                  String name,
-                  String surname) {
+    public Client(Integer id,
+                  String firstName,
+                  String lastName) {
         this.id = id;
-        this.name = name;
-        this.surname = surname;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-    public Client(String name,
-                  String surname) {
+    public Client(String firstName,
+                  String lastName) {
 
-        this.name = name;
-        this.surname = surname;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.creationTimestamp = LocalDateTime.now();
     }
 }

@@ -11,7 +11,7 @@ public interface QueryBuilderFunctionality {
 
     PreparedStatement buildGetAllQuery() throws SQLException;
 
-    PreparedStatement buildUpdateQuery(Long productId, Product newProductParameters) throws SQLException;
+    PreparedStatement buildUpdateQuery(Integer productId, Product newProductParameters) throws SQLException;
 
-    PreparedStatement buildDeleteQuery(Long productId) throws SQLException;
+    PreparedStatement buildDeleteQuery(Integer productId) throws SQLException;
 }

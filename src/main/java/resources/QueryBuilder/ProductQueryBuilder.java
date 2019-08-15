@@ -41,7 +41,7 @@ public class ProductQueryBuilder implements QueryBuilderFunctionality {
     }
 
     @Override
-    public PreparedStatement buildUpdateQuery(Long productId, Product newProductParameters) throws SQLException {
+    public PreparedStatement buildUpdateQuery(Integer productId, Product newProductParameters) throws SQLException {
 
         String query = "UPDATE product SET name=?, price=?, measure_name_id=?, product_category_id=? WHERE id=?";
 
@@ -50,18 +50,18 @@ public class ProductQueryBuilder implements QueryBuilderFunctionality {
         preparedStatement.setBigDecimal(2, newProductParameters.getPrice());
         preparedStatement.setInt(3, MeasureName.getMeasureNameIdByEnum(newProductParameters.getMeasureName()));
         preparedStatement.setInt(4, ProductCategory.getProductCategoryIdByEnum(newProductParameters.getProductCategory()));
-        preparedStatement.setLong(5, productId);
+        preparedStatement.setInt(5, productId);
 
         return preparedStatement;
     }
 
     @Override
-    public PreparedStatement buildDeleteQuery(Long productId) throws SQLException {
+    public PreparedStatement buildDeleteQuery(Integer productId) throws SQLException {
 
         String query = "DELETE FROM product WHERE id=?";
 
         preparedStatement = connection.prepareStatement(query);
-        preparedStatement.setLong(1, productId);
+        preparedStatement.setInt(1, productId);
 
         return preparedStatement;
     }

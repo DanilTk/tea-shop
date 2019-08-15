@@ -37,7 +37,7 @@ public class DAOProduct extends DAO implements DAOFunctionality<Product> {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
-                Long id = resultSet.getLong("id");
+                Integer id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 BigDecimal price = BigDecimal.valueOf(resultSet.getDouble("price"));
                 MeasureName measureName = MeasureName.getMeasureNameEnumById(resultSet.getInt("measure_name_id"));
@@ -53,7 +53,7 @@ public class DAOProduct extends DAO implements DAOFunctionality<Product> {
     }
 
     @Override
-    public Product update(Long id, Product newProductParameters) {
+    public Product update(Integer id, Product newProductParameters) {
 
         try {
             PreparedStatement preparedStatement = productQueryBuilder.buildUpdateQuery(id, newProductParameters);
@@ -66,7 +66,7 @@ public class DAOProduct extends DAO implements DAOFunctionality<Product> {
     }
 
     @Override
-    public Long delete(Long id) {
+    public Integer delete(Integer id) {
 
         try {
             PreparedStatement preparedStatement = productQueryBuilder.buildDeleteQuery(id);
