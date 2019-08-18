@@ -5,7 +5,7 @@ import model.Product;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public interface QueryBuilderFunctionality {
+public interface QueryBuilder {
 
     PreparedStatement buildAddQuery(Product product) throws SQLException;
 

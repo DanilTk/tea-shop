@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class ProductQueryBuilder implements QueryBuilderFunctionality {
+public class ProductQueryBuilder implements QueryBuilder {
     private Connection connection;
     private PreparedStatement preparedStatement;
 

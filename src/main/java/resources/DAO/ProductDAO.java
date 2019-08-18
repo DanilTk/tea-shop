@@ -12,8 +12,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DAOProduct extends DAO implements DAOFunctionality<Product> {
-    private ProductQueryBuilder productQueryBuilder = new ProductQueryBuilder(super.getConnection()); //TODO: Robert to advise if this piece is needed or can workaround?
+public class ProductDAO extends ConnectionManager implements DAO<Product> {
+    private ProductQueryBuilder productQueryBuilder = new ProductQueryBuilder(super.getConnection());
 
     @Override
     public Product add(Product product) {

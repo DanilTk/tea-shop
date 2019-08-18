@@ -1,30 +1,15 @@
 package resources.DAO;
 
-import util.jdbc.DBConnector;
-import util.jdbc.DBPropertiesReader;
+import java.util.List;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.Properties;
+public interface DAO<T> {
 
-public abstract class DAO {
-    private Connection connection;
+    T add(T domain);
 
-    public DAO() {
-        init();
-    }
+    List<T> getAll();
 
-    private void init() {
-        Properties properties = DBPropertiesReader.loadDBProperties();
+    T update(Integer id, T domain);
 
-        try {
-            connection = DBConnector.createDbConnection(properties);
-        } catch (SQLException e) {
-            //TODO manage exception
-        }
-    }
+    Integer delete(Integer id);
 
-    protected Connection getConnection() {
-        return connection;
-    }
 }
