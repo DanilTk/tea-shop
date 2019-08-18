@@ -12,7 +12,7 @@ public enum ProductCategory {
     private static Map<ProductCategory, Integer> productCategoryIntegerMap = new HashMap<>();
     private static Map<Integer, ProductCategory> integerProductCategoryMap = new HashMap<>();
 
-    public static int getProductCategoryIdByEnum(ProductCategory productCategory) {
+    public static int getProductCategoryIdByEnum(ProductCategory productCategory) { // TODO: remove
         productCategoryIntegerMap.put(ProductCategory.TEA, 1);
         productCategoryIntegerMap.put(ProductCategory.COFFEE, 2);
         productCategoryIntegerMap.put(ProductCategory.FOOD, 3);
@@ -21,7 +21,7 @@ public enum ProductCategory {
         return productCategoryIntegerMap.get(productCategory);
     }
 
-    public static ProductCategory getProductCategoryEnumById(Integer productCategoryId) {
+    public static ProductCategory getProductCategoryEnumById(Integer productCategoryId) { // TODO: remove
         integerProductCategoryMap.put(1, ProductCategory.TEA);
         integerProductCategoryMap.put(2, ProductCategory.COFFEE);
         integerProductCategoryMap.put(3, ProductCategory.FOOD);

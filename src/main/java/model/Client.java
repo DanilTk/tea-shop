@@ -13,15 +13,15 @@ public class Client {
     private Integer id;
     private String firstName;
     private String lastName;
-    private LocalDateTime creationTimestamp;
+    private LocalDateTime creationTimestamp = LocalDateTime.now();
     private LocalDateTime deletionTimestamp;
 
-    public Client(Integer id,
-                  String firstName,
-                  String lastName) {
+    public Client(Integer id, String firstName, String lastName, LocalDateTime creationTimestamp, LocalDateTime deletionTimestamp) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.creationTimestamp = creationTimestamp;
+        this.deletionTimestamp = deletionTimestamp;
     }
 
     public Client(String firstName,
@@ -29,6 +29,5 @@ public class Client {
 
         this.firstName = firstName;
         this.lastName = lastName;
-        this.creationTimestamp = LocalDateTime.now();
     }
 }
