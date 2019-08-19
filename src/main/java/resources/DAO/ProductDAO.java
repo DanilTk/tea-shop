@@ -40,8 +40,8 @@ public class ProductDAO extends ConnectionManager implements DAO<Product> {
                 Integer id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 BigDecimal price = BigDecimal.valueOf(resultSet.getDouble("price"));
-                MeasureName measureName = MeasureName.getMeasureNameEnumById(resultSet.getInt("measure_name_id"));
-                ProductCategory productCategory = ProductCategory.getProductCategoryEnumById(resultSet.getInt("product_category_id"));
+                MeasureName measureName = MeasureName.valueOf(resultSet.getString("measure_name"));
+                ProductCategory productCategory = ProductCategory.valueOf(resultSet.getString("product_category"));
                 Product product = new Product(id, name, price, measureName, productCategory);
                 products.add(product);
             }

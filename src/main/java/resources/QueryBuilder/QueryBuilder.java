@@ -1,17 +1,15 @@
 package resources.QueryBuilder;
 
-import model.Product;
-
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public interface QueryBuilder {
+public interface QueryBuilder<T> {
 
-    PreparedStatement buildAddQuery(Product product) throws SQLException;
+    PreparedStatement buildAddQuery(T instance) throws SQLException;
 
     PreparedStatement buildGetAllQuery() throws SQLException;
 
-    PreparedStatement buildUpdateQuery(Integer productId, Product newProductParameters) throws SQLException;
+    PreparedStatement buildUpdateQuery(Integer id, T newParameters) throws SQLException;
 
-    PreparedStatement buildDeleteQuery(Integer productId) throws SQLException;
+    PreparedStatement buildDeleteQuery(Integer id) throws SQLException;
 }
