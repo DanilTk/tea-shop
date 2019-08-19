@@ -82,17 +82,6 @@ class ClassExtractor {
         return null;
     }
 
-    private static Integer extractInteger(Cell cell) {
-        if (cell != null) {
-            try {
-                return (int) Double.parseDouble(cell.toString());
-            } catch (NullPointerException | NumberFormatException e) {
-                return null;
-            }
-        }
-        return null;
-    }
-
     private static MeasureName extractMeasureName(Cell cell) { //TODO: Robert to advise how to make generic method to extract any enum if possible
         if (cell != null) {
             try {
@@ -109,6 +98,17 @@ class ClassExtractor {
             try {
                 return ProductCategory.valueOf(cell.toString().toUpperCase());
             } catch (NullPointerException | IllegalArgumentException e) {
+                return null;
+            }
+        }
+        return null;
+    }
+
+    private static Integer extractInteger(Cell cell) {
+        if (cell != null) {
+            try {
+                return (int) Double.parseDouble(cell.toString());
+            } catch (NullPointerException | NumberFormatException e) {
                 return null;
             }
         }
