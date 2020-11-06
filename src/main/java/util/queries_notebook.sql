@@ -1,1 +1,2 @@
---set global time_zone = '+8:00';
+--
+set global time_zone = '+8:00';
