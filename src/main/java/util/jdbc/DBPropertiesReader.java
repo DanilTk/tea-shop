@@ -7,7 +7,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class DBPropertiesReader {
-
     private static final Logger LOGGER = Logger.getLogger("teashop.util.jdbc.DBPropertiesReader");
     private static final String DB_PROPERTIES_FILE_NAME = "db.properties";
 

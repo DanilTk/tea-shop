@@ -1,5 +1,4 @@
-teashop.iml
 .idea
 target
-todo list
-/Clients 2019-08-17.xlsx
+*.xlsx
+teashop.iml

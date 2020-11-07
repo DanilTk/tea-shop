@@ -1,0 +1,5 @@
+1. Add more constructors to classes in model repository
+2. If product is piece - it cannot have decimal value in excel
+3. Implement a stock of products and synchronize with client's ability to buy product amount
+4. remove excel closure if it is try with resources
+5. add database connection closure
